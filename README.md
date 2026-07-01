@@ -209,5 +209,4 @@ GitHub Actions is configured in `.github/workflows/ci.yml`.
 
 ## Citation
 
-If you use PD-MUSE, please cite the manuscript and the package. A `CITATION.cff`
-file is included for GitHub citation metadata.
+If you use PD-MUSE, please cite the manuscript and the package. 
