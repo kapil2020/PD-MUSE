@@ -85,7 +85,7 @@ Expected headline results on the 7,000 stated-preference observations:
 | Nested MLE ground nest | lambda `0.926292`, log-likelihood `-5597.345513` |
 | Nested MLE bus-rail nest | lambda `0.762043`, log-likelihood `-5586.144764` |
 
-The MNL coefficients match the manuscript table to rounding:
+The PD-MUSE MNL coefficients match the apollo table to rounding:
 
 ```text
 ASC bus       0.062
@@ -124,8 +124,7 @@ The class provides:
 
 ### `NestedLogitTwoStage`
 
-Reproduces the manuscript's two-stage PD-MUSE bus-rail result. The first stage
-fits the full-sample PD-MUSE MNL coefficients. The second stage recovers the
+The first stage fits the full-sample PD-MUSE MNL coefficients. The second stage recovers the
 bus-rail dissimilarity parameter.
 
 ```python
@@ -201,11 +200,11 @@ GitHub Actions is configured in `.github/workflows/ci.yml`.
 
 - `src/pdmuse/`: package source
 - `src/pdmuse/datasets/`: Apollo sample data and dictionary
-- `examples/apollo_mode_choice.py`: manuscript-table reproduction script
+- `examples/apollo_mode_choice.py`: table reproduction script
 - `tests/`: Apollo-based regression tests
 - `docs/theory.md`: model notes
-- `docs/manuscript_package_section.md`: manuscript-ready package section
+- `docs/manuscript_package_section.md`: package ready section
 
 ## Citation
 
-If you use PD-MUSE, please cite the manuscript and the package. 
+coming soon, all copyrights reserved with HUMAN LAB, UCLA.
