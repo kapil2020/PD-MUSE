@@ -506,12 +506,14 @@ class NestedLogitMLE:
             params, X_arr, y_arr, nest_labels, target, availability_arr, weights
         )
         inv_hessian = np.eye(params.shape[0])
+        weight_scale = max(float(np.sum(weights)), 1.0)
+        gradient_tol = max(self.tol, self.tol * np.sqrt(weight_scale))
         converged = False
         message = "maximum iterations reached"
 
         for iteration in range(1, self.max_iter + 1):
             grad_norm = float(np.max(np.abs(gradient)))
-            if grad_norm <= self.tol:
+            if grad_norm <= gradient_tol:
                 converged = True
                 message = "converged"
                 break
@@ -560,6 +562,10 @@ class NestedLogitMLE:
                 )
         else:
             iteration = self.max_iter
+
+        if not converged and float(np.max(np.abs(gradient))) <= gradient_tol:
+            converged = True
+            message = "converged"
 
         beta = params[:-1]
         lam = self._eta_to_lambda(params[-1])

@@ -9,6 +9,7 @@ htmlcov/
 build/
 dist/
 .venv/
+.venv*/
 venv/
 .DS_Store
 tmp/
