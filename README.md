@@ -24,8 +24,7 @@ primal variables are the fitted choice probabilities.
   baseline MNL.
 - **Generalized entropy tools**: inverse-product differentiation logit helpers
   are included for generalized-entropy and inverse-share workflows.
-- **GitHub and PyPI ready**: packaging metadata, license, citation file,
-  manifest, CI workflow, tests, examples, and build checks are included.
+
 
 ## Installation
 
