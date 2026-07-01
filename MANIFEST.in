@@ -1,0 +1,8 @@
+include CHANGELOG.md
+include CITATION.cff
+include LICENSE
+include README.md
+recursive-include docs *.md
+recursive-include examples *.py
+recursive-include src/pdmuse/datasets *.csv *.pdf
+recursive-include tests *.py

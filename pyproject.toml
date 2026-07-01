@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pd-muse"
+version = "0.1.0"
+description = "Primal-dual maximum-entropy utilities for choice-model estimation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Kapil", email = "kapilm.48@gmail.com" }
+]
+keywords = [
+  "choice modelling",
+  "discrete choice",
+  "maximum entropy",
+  "multinomial logit",
+  "nested logit",
+  "transportation"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+  "Typing :: Typed"
+]
+dependencies = [
+  "numpy>=1.23",
+  "pandas>=1.5"
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.0",
+  "pytest>=7.0",
+  "ruff>=0.5",
+  "twine>=5.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/kapilm48/pd-muse"
+Issues = "https://github.com/kapilm48/pd-muse/issues"
+Manuscript = "https://github.com/kapilm48/pd-muse"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pdmuse = ["py.typed", "datasets/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "N"]
+ignore = ["N803", "N806"]

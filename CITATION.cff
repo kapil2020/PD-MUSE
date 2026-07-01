@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use PD-MUSE in research, please cite the package and manuscript."
+title: "PD-MUSE: primal-dual maximum-entropy choice modelling in Python"
+version: "0.1.0"
+date-released: "2026-07-01"
+authors:
+  - family-names: "Kapil"
+repository-code: "https://github.com/kapilm48/pd-muse"
+license: "MIT"
